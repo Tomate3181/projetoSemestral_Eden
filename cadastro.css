@@ -1,0 +1,161 @@
+/* Estilos específicos para a página de Cadastro, seguindo o padrão do style.css existente */
+
+.cadastro-main {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */ /* Removido para permitir ocupear a altura total */
+    min-height: calc(100vh - 140px); /* Ajusta a altura para caber na tela, considerando header e footer */
+    padding: 0; /* Remove padding lateral para que o container encoste nas bordas */
+    background-color: var(--color-bg-light); /* Fundo claro da seção, como no restante do site */
+}
+
+.cadastro-container {
+    display: flex;
+    /* ***** ALTERAÇÕES AQUI: Fundo claro para o container ***** */
+    background-color: var(--color-white); /* Fundo branco para o container do cadastro, como o resto do site */
+    /* ***** FIM DAS ALTERAÇÕES ***** */
+
+    border-radius: 0; /* Remover arredondamento para encostar nas bordas */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); /* Sombra mais suave, como as cards da home */
+    overflow: hidden;
+    
+    width: 100%; /* Ocupa 100% da largura do seu pai */
+    max-width: none; /* Remover limite de largura */
+
+    min-height: calc(100vh - 140px); /* Ocupa a altura restante da viewport */
+}
+
+.cadastro-form-wrapper {
+    flex: 1; /* Ocupa a metade do espaço */
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* ***** ALTERAÇÕES AQUI: Cor do texto para fundo claro ***** */
+    color: var(--color-text-dark); /* Texto escuro para contraste com o fundo claro */
+    /* ***** FIM DAS ALTERAÇÕES ***** */
+}
+
+.cadastro-form-wrapper h2 {
+    font-size: 2.5rem;
+    /* ***** ALTERAÇÕES AQUI: Cor do título para fundo claro ***** */
+    color: var(--color-primary-dark); /* Título verde escuro, como os títulos da home */
+    /* ***** FIM DAS ALTERAÇÕES ***** */
+    text-align: left;
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-heading);
+}
+
+.cadastro-form .form-group {
+    margin-bottom: var(--spacing-sm);
+}
+
+.cadastro-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    /* ***** ALTERAÇÕES AQUI: Cor da label para fundo claro ***** */
+    color: var(--color-text-dark); /* Labels em cinza/preto */
+    /* ***** FIM DAS ALTERAÇÕES ***** */
+    font-family: var(--font-body);
+}
+
+.cadastro-form input[type="text"],
+.cadastro-form input[type="email"],
+.cadastro-form input[type="password"] {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--color-gray-medium); /* Borda cinza clara para inputs */
+    border-radius: 8px;
+    /* ***** ALTERAÇÕES AQUI: Cores de input para fundo claro ***** */
+    background-color: var(--color-white); /* Fundo branco para inputs */
+    color: var(--color-text-dark); /* Texto escuro nos inputs */
+    /* ***** FIM DAS ALTERAÇÕES ***** */
+    font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    font-family: var(--font-body);
+}
+
+.cadastro-form input::placeholder {
+    /* ***** ALTERAÇÕES AQUI: Placeholder para fundo claro ***** */
+    color: var(--color-gray-medium); /* Placeholder em cinza médio */
+    /* ***** FIM DAS ALTERAÇÕES ***** */
+}
+
+.cadastro-form input:focus {
+    outline: none;
+    /* ***** ALTERAÇÕES AQUI: Foco de input para fundo claro ***** */
+    border-color: var(--color-primary-medium); /* Borda verde médio no foco */
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3); /* Brilho verde médio no foco */
+    /* ***** FIM DAS ALTERAÇÕES ***** */
+}
+
+.cadastro-form .btn-primary {
+    width: 100%;
+    margin-top: var(--spacing-md);
+    padding: 1rem 1.8rem;
+    border-radius: 8px;
+    /* ***** ALTERAÇÕES AQUI: Botão para fundo claro (Mantido o verde primário) ***** */
+    background-color: var(--color-primary-medium); /* Cor verde médio do seu site */
+    color: var(--color-white); /* Texto branco */
+    /* ***** FIM DAS ALTERAÇÕES ***** */
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(0, 150, 0, 0.2); /* Sombra do botão primário da home */
+    transition: all 0.3s ease;
+}
+
+.cadastro-form .btn-primary:hover {
+    background-color: var(--color-primary-dark); /* Fica verde escuro no hover, como o btn-primary da home */
+    color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 150, 0, 0.3);
+}
+
+
+.cadastro-image-area {
+    flex: 1;
+    background-image: url('./assets/fundo-cadastro.jpg');
+    background-size: cover;
+    background-position: center;
+    /* min-height será determinada pelo min-height do container pai */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cadastro-container {
+        flex-direction: column;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .cadastro-form-wrapper {
+        padding: var(--spacing-md);
+        text-align: center;
+    }
+
+    .cadastro-form-wrapper h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .cadastro-image-area {
+        min-height: 200px;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .cadastro-form-wrapper h2 {
+        font-size: 1.8rem;
+    }
+    .cadastro-form input {
+        padding: 0.7rem 0.8rem;
+    }
+    .cadastro-form .btn-primary {
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
+    }
+}
