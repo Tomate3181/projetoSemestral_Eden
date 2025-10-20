@@ -1,0 +1,245 @@
+/* Register Page Specific Styles */
+.register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Adjust height as needed */
+    background: linear-gradient(135deg, var(--color-secondary-lightest) 0%, var(--color-primary-light) 100%);
+}
+
+.register-card {
+    background-color: var(--color-white);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-lg);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.register-card h2 {
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-md);
+    font-size: 2.2rem;
+}
+
+/* Reusing form-group, input styles from login page */
+/* .form-group {} */
+/* .form-group label {} */
+/* .form-group input {} */
+
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    font-size: 0.9rem;
+    color: var(--color-text-dark);
+}
+
+.terms-checkbox input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: var(--color-primary-medium); /* Style checkbox */
+}
+
+.terms-checkbox a {
+    font-weight: bold;
+    color: var(--color-primary-dark);
+}
+
+.terms-checkbox a:hover {
+    color: var(--color-primary-medium);
+    text-decoration: underline;
+}
+
+.register-form .btn-primary {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.login-link {
+    margin-top: var(--spacing-md);
+    color: var(--color-text-dark);
+}
+
+.login-link a {
+    font-weight: bold;
+    color: var(--color-primary-dark);
+}
+
+.login-link a:hover {
+    color: var(--color-primary-medium);
+}
+
+/* You might want to update the link in login.html as well for "Crie uma agora!" */
+/* In login.html:
+<p class="signup-link">Não tem uma conta? <a href="register.html">Crie uma agora!</a></p>
+*/
+
+/* Login Page Specific Styles */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; /* Adjust height as needed */
+    background: linear-gradient(135deg, var(--color-secondary-lightest) 0%, var(--color-primary-light) 100%);
+}
+
+.login-card {
+    background-color: var(--color-white);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-lg);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.login-card h2 {
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-md);
+    font-size: 2.2rem;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-sm);
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--color-text-dark);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--color-gray-medium);
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-primary-medium);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.form-options {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.9rem;
+}
+
+.form-options .forgot-password {
+    color: var(--color-primary-medium);
+}
+
+.form-options .forgot-password:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+.login-form .btn-primary {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.signup-link {
+    margin-top: var(--spacing-md);
+    color: var(--color-text-dark);
+}
+
+.signup-link a {
+    font-weight: bold;
+    color: var(--color-primary-dark);
+}
+
+.signup-link a:hover {
+    color: var(--color-primary-medium);
+}
+
+/* Animations for login card */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Forgot Password Page Specific Styles */
+.forgot-password-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; /* Adjust height as needed */
+    background: linear-gradient(135deg, var(--color-secondary-lightest) 0%, var(--color-primary-light) 100%);
+}
+
+.forgot-password-card {
+    background-color: var(--color-white);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-lg);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.forgot-password-card h2 {
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-sm);
+    font-size: 2.2rem;
+}
+
+.forgot-password-card p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-dark);
+    font-size: 1.1rem;
+}
+
+/* Reusing form-group, input styles from login page */
+/* .form-group {} */
+/* .form-group label {} */
+/* .form-group input {} */
+
+.forgot-password-form .btn-primary {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.back-to-login {
+    margin-top: var(--spacing-md);
+    color: var(--color-text-dark);
+}
+
+.back-to-login a {
+    font-weight: bold;
+    color: var(--color-primary-dark);
+}
+
+.back-to-login a:hover {
+    color: var(--color-primary-medium);
+}
+
+/* Update the link in login.html as well for "Esqueceu a senha?" */
+/* In login.html:
+<div class="form-options">
+    <a href="forgot-password.html" class="forgot-password">Esqueceu a senha?</a>
+</div>
+*/

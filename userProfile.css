@@ -1,0 +1,132 @@
+/* userProfile.css - Estilos específicos para a página de perfil */
+
+.profile-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinhar ao topo para mais espaço */
+    min-height: 80vh; /* Ajuste a altura conforme necessário */
+    background: linear-gradient(135deg, var(--color-secondary-lightest) 0%, var(--color-primary-light) 100%);
+}
+
+.profile-card {
+    background-color: var(--color-white);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-lg);
+    max-width: 700px; /* Aumentado para acomodar mais informações */
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.profile-card h2 {
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-md);
+    font-size: 2.5rem;
+}
+
+.profile-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas para detalhes */
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    text-align: left;
+}
+
+.profile-detail {
+    background-color: var(--color-bg-light);
+    padding: var(--spacing-sm);
+    border-radius: 8px;
+    border: 1px solid var(--color-gray-light);
+}
+
+.profile-detail label {
+    display: block;
+    font-weight: bold;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+}
+
+.profile-detail p {
+    color: var(--color-text-dark);
+    font-size: 1.1rem;
+    word-wrap: break-word; /* Garante que textos longos quebrem a linha */
+}
+
+.profile-actions {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os botões quebrem a linha em telas menores */
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.profile-actions .btn-primary,
+.profile-actions .btn-secondary,
+.profile-actions .btn-delete {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    min-width: 150px; /* Garante um tamanho mínimo para os botões */
+}
+
+.btn-delete {
+    background-color: #dc3545; /* Vermelho para exclusão */
+    color: var(--color-white);
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+.logout-btn {
+    background-color: var(--color-gray-medium);
+    color: var(--color-white);
+}
+
+.logout-btn:hover {
+    background-color: #777;
+}
+
+
+/* Responsive Design for Profile Page */
+@media (max-width: 768px) {
+    .profile-info-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+    .profile-card {
+        padding: var(--spacing-md);
+    }
+    .profile-card h2 {
+        font-size: 2rem;
+    }
+    .profile-detail p {
+        font-size: 1rem;
+    }
+    .profile-actions .btn-primary,
+    .profile-actions .btn-secondary,
+    .profile-actions .btn-delete {
+        width: 100%; /* Botões ocupam a largura total em telas menores */
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        padding: var(--spacing-sm);
+    }
+    .profile-card h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Adicione esta classe ao seu style.css se ainda não tiver, para destacar o ícone ativo */
+.header-icons .active {
+    color: var(--color-primary-dark); /* Cor de destaque para o ícone ativo */
+    transform: scale(1.2);
+}
