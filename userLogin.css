@@ -24,11 +24,6 @@
     font-size: 2.2rem;
 }
 
-/* Reusing form-group, input styles from login page */
-/* .form-group {} */
-/* .form-group label {} */
-/* .form-group input {} */
-
 .terms-checkbox {
     display: flex;
     align-items: center;
@@ -75,11 +70,6 @@
 .login-link a:hover {
     color: var(--color-primary-medium);
 }
-
-/* You might want to update the link in login.html as well for "Crie uma agora!" */
-/* In login.html:
-<p class="signup-link">Não tem uma conta? <a href="register.html">Crie uma agora!</a></p>
-*/
 
 /* Login Page Specific Styles */
 .login-page {
@@ -210,11 +200,6 @@
     font-size: 1.1rem;
 }
 
-/* Reusing form-group, input styles from login page */
-/* .form-group {} */
-/* .form-group label {} */
-/* .form-group input {} */
-
 .forgot-password-form .btn-primary {
     width: 100%;
     padding: 1rem;
@@ -236,10 +221,3 @@
 .back-to-login a:hover {
     color: var(--color-primary-medium);
 }
-
-/* Update the link in login.html as well for "Esqueceu a senha?" */
-/* In login.html:
-<div class="form-options">
-    <a href="forgot-password.html" class="forgot-password">Esqueceu a senha?</a>
-</div>
-*/
